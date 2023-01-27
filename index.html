@@ -7,9 +7,9 @@
     
     <title></title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="index.css">
 </head>
@@ -22,25 +22,41 @@
 
     <body>
 
-    <main>    
         
-        <h1 class="title">Settlers of Catan</h1>
-        <h2 class="subtitle">scorekeeper</h2>
-        
+    
+    <main>         
+       
+        <div class="info-container">
+
+        <h1 class="title">Settlers of Catan scorekeeper</h1>
+        <!-- <h2 class="subtitle">scorekeeper</h2>    -->
+
+         <ul>
+            <!-- <li class="list-title">Settlers of Catan</li> -->
+            <!-- <li class="list-subtitle">scorekeeper</li> -->
+            <li>Settlement: +1</li>
+            <li>City : +2</li>
+            <li>Development card: +1</li>
+            <li>Longest road: +2</li>
+            <li>Another player builds the longest road: -2</li>
+            <li>Largest army: 2 points</li>
+            <li>Another player builds the largest army: -2</li>
+        </ul>
+
+        </div> <!---close info container-->
+ 
+ 
         <div class="container-one">
          
             <div class="player-container">
                 <h3>Player 1</h3>
                 <p class="one-score">0</p>
-                
-                <button class="settlement-score">Settlement +1</button>
-                <button class="city-score">City +2</button>
-                <button class="development-score">Development Card +1</button>
-                <button class="road-score">Longest Road +2</button>
-                <button class="road-score">Longest Road -2</button>
-                <button class="army score">Largest army +2</button>
-                <button class="army score">Largest army -2</button>
-                
+            
+            <div class="button-wrapper">
+                <button class="plus-one">+1</button>
+                <button class="plus-two">+2</button>
+                <button class="plus-three">-2</button>
+            </div> <!--close button wrapper-->          
                 
             </div> <!--close player div-->
           
@@ -48,13 +64,11 @@
                 <h3>Player 2</h3>
                 <p class="two-score">0</p>
                 
-                <button class="settlement-score">Settlement +1</button>
-                <button class="city-score">City +2</button>
-                <button class="development-score">Development Card +1</button>
-                <button class="road-score">Longest Road +2</button>
-                <button class="road-score">Longest Road -2</button>
-                <button class="army score">Largest army +2</button>
-                <button class="army score">Largest army -2</button>
+                <div class="button-wrapper">
+                    <button class="plus-one">+1</button>
+                    <button class="plus-two">+2</button>
+                    <button class="plus-three">-2</button>
+                </div> <!--close button wrapper-->  
                 
                 
             </div> <!--close player div-->
@@ -63,13 +77,11 @@
                 <h3>Player 3</h3>
                 <p class="three-score">0</p>
                 
-                <button class="settlement-score">Settlement +1</button>
-                <button class="city-score">City +2</button>
-                <button class="development-score">Development Card +1</button>
-                <button class="road-score">Longest Road +2</button>
-                <button class="road-score">Longest Road -2</button>
-                <button class="army score">Largest army +2</button>
-                <button class="army score">Largest army -2</button>
+                <div class="button-wrapper">
+                    <button class="plus-one">+1</button>
+                    <button class="plus-two">+2</button>
+                    <button class="plus-three">-2</button>
+                </div> <!--close button wrapper-->  
             
             </div> <!--close player div-->    
                 
@@ -81,13 +93,11 @@
                 <h3>Player 4</h3>
                 <p class="four-score">0</p>
                 
-                <button class="settlement-score">Settlement +1</button>
-                <button class="city-score">City +2</button>
-                <button class="development-score">Development Card +1</button>
-                <button class="road-score">Longest Road +2</button>
-                <button class="road-score">Longest Road -2</button>
-                <button class="army score">Largest army +2</button>
-                <button class="army score">Largest army -2</button>
+                <div class="button-wrapper">
+                    <button class="plus-one">+1</button>
+                    <button class="plus-two">+2</button>
+                    <button class="plus-three">-2</button>
+                </div> <!--close button wrapper-->  
                 
                 
             </div> <!--close player div-->
@@ -96,13 +106,11 @@
                 <h3>Player 5</h3>
                 <p class="five-score">0</p>
                 
-                <button class="settlement-score">Settlement +1</button>
-                <button class="city-score">City +2</button>
-                <button class="development-score">Development Card +1</button>
-                <button class="road-score">Longest Road +2</button>
-                <button class="road-score">Longest Road -2</button>
-                <button class="army score">Largest army +2</button>
-                <button class="army score">Largest army -2</button>
+                <div class="button-wrapper">
+                    <button class="plus-one">+1</button>
+                    <button class="plus-two">+2</button>
+                    <button class="plus-three">-2</button>
+                </div> <!--close button wrapper-->  
                 
                 
             </div> <!--close player div-->
@@ -112,19 +120,19 @@
                 <h3>Player 6</h3>
                 <p class="six-score">0</p>
                 
-                <button class="settlement-score">Settlement +1</button>
-                <button class="city-score">City +2</button>
-                <button class="development-score">Development Card +1</button>
-                <button class="road-score">Longest Road +2</button>
-                <button class="road-score">Longest Road -2</button>
-                <button class="army score">Largest army +2</button>
-                <button class="army score">Largest army -2</button>
+                <div class="button-wrapper">
+                    <button class="plus-one">+1</button>
+                    <button class="plus-two">+2</button>
+                    <button class="plus-three">-2</button>
+                </div> <!--close button wrapper-->  
                 
                 
             </div> <!--close player div-->
 
 
         </div> <!-- close container 2-->
+
+ 
         
      </main>   
 
@@ -132,10 +140,3 @@
     </body>
 </html>
 
-<!-- Catan Scoring:
-6 players
-Settlement: 1 point
-City : 2 points
-Longest road: 2 points, five or greater - can be taken
-Largest army: 2 points, 3 knight cards - can be taken
-Development card: 1 point -->

@@ -6,7 +6,7 @@ Date:
 
 /*
 COOLORS color palette link
-https://coolors.co
+https://coolors.co/a04c24-ce2d25-1c9edf-79ad50-ffdf01
 */
 
 /****** VARIABLES ******/
@@ -14,9 +14,15 @@ https://coolors.co
 :root {
     
     /*COLORS*/
-  
+    --rust: #31180C;
+    --maximum-red: #9D211B;
+    --carolina-blue: #1c9edfff;
+    --bud-green: #79ad50ff;
+    --golden-yellow: #ffdf01ff;
+
     
     /*BORDER RADIUS*/
+    --br-button: .5rem;
     --br-soft: 1rem;
     --br-round: 50%;
     
@@ -24,8 +30,8 @@ https://coolors.co
     --fs-xs: 1rem;
     --fs-s: 1.25rem;
     --fs-m: 1.5rem;
-    --fs-l: 2.25rem;
-    --fs-title: 2.5rem;
+    --fs-l: 2rem;
+    --fs-title: 3rem;
 }
 
 /****** MARGIN AND PADDING RESET ******/
@@ -39,23 +45,138 @@ https://coolors.co
 /******* GLOBAL STYLES *******/
 
 body {
-    text-align: center;
+    font-family: 'Aboreto', cursive;
+    color: var(--golden-yellow);
+    font-weight: 900;
+    letter-spacing: .1rem;
+    text-align: left;
 }
+
+h1 {
+    font-size: var(--fs-title);
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px var(--rust);
+
+    /* grid-column: 1; */
+
+}
+
+h2 {
+    font-size: var(--fs-l);
+    margin-bottom: 1rem;
+    /* grid-column: 1; */
+}
+
+h3 {
+    font-size: var(--fs-m);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: var(--fs-title);
+    color: white;
+    background-color: var(--rust);
+    padding: 2rem 3rem;
+    margin-bottom: 1rem;
+    border-radius: var(--br-soft);
+    /* border: 5px solid var(--rust); */
+    /* box-shadow: 5px 5px var(--rust); */
+}
+
+ul {
+    width: 75%;
+    background-color: var(--rust);
+    text-align: left;
+    list-style-type: none;
+    padding: 2rem;
+    border-radius: var(--br-soft);
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/****** MAIN STYLING ******/
 
 main {
-   border: 7px solid hotpink;
+   background-color: var(--carolina-blue); 
+   max-width: 1200px;
+   padding: 1rem;
+   margin: 1rem; 
+   border-radius: var(--br-soft);
+    /* display: flex; */
+  
+   /* display: grid;
+   grid-template-columns: .5fr 2fr; */
+
+   /* border: 7px solid hotpink; */
 }
 
-.container-one, .container-two {
+/****** CONTAINER STYLING ******/
+
+.info-container {
+    padding: 2rem;
+    /* margin: 2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width: 40rem) {
+    .info-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}  
+
+.container-one {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 7px solid limegreen;
+    /* border: 7px solid limegreen; */
+}
+
+.container-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: 7px solid limegreen; */
 }
 
 .player-container {
+    background-color: var(--maximum-red);
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem 1rem;
+    border-radius: var(--br-soft);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 7px solid yellow;
+    box-shadow: 5px 5px var(--rust);
+
+    /* border: 7px solid yellow; */
+}
+
+@media (max-width: 40rem) {
+    .container-one, .container-two{
+        flex-direction: column;
+    }
+}
+
+/****** BUTTON STYLING ******/
+
+button {
+    font-family: 'Aboreto', cursive;
+    font-size: var(--fs-s);
+    /* text-align: center; */
+    letter-spacing: .25rem;
+    color: var(--golden-yellow);
+    background-color: var(--maximum-red);
+    width: 3rem;
+    padding: .5rem;
+    margin: .25rem;
+    border-radius: var(--br-button);
+    border: 3px solid var(--golden-yellow);
+    box-shadow: 3px 3px var(--rust);
 }
