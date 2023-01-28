@@ -84,8 +84,9 @@ p {
 }
 
 ul {
-    width: 75%;
-    background-color: var(--rust);
+    width: 50%;
+    background-color: var(--carolina-blue);
+    font-size: var(--fs-xs);
     text-align: left;
     list-style-type: none;
     padding: 2rem;
@@ -99,11 +100,13 @@ li {
 /****** MAIN STYLING ******/
 
 main {
-   background-color: var(--carolina-blue); 
+   background-color: var(--rust); 
    max-width: 1200px;
    padding: 1rem;
    margin: 1rem; 
    border-radius: var(--br-soft);
+   border: 5px solid var(--rust);
+   /* box-shadow: 5px 5px var(--rust); */
     /* display: flex; */
   
    /* display: grid;
@@ -118,8 +121,8 @@ main {
     padding: 2rem;
     /* margin: 2rem; */
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
@@ -146,14 +149,14 @@ main {
 
 .player-container {
     background-color: var(--maximum-red);
-    width: 100%;
+    /* width: 75%; */
     padding: 2rem;
     margin: 2rem 1rem;
     border-radius: var(--br-soft);
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 5px 5px var(--rust);
+    /* box-shadow: 5px 5px var(--golden-yellow); */
 
     /* border: 7px solid yellow; */
 }
@@ -180,3 +183,23 @@ button {
     border: 3px solid var(--golden-yellow);
     box-shadow: 3px 3px var(--rust);
 }
+
+
+/*
+
+.panel {
+    display: none; /*! FOR JAVASCRIPT 
+}
+
+ACCORDIAN INFO
+
+.accordion:after {
+    content: '\2038'; /*? Unicode character for "caret" sign (^) 
+    font-size: 2.5rem;
+    font-weight: bold;
+   color: var(--text-soft-red);
+ }
+    
+.active:after { /*! FOR JAVASCRIPT 
+    transform: rotate(0.5turn);
+}*/
