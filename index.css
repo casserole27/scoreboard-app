@@ -45,8 +45,8 @@ https://coolors.co/a04c24-ce2d25-1c9edf-79ad50-ffdf01
 
 /******* GLOBAL STYLES *******/
 
+
 body {
-    /* height: 100vh; */
     font-family: 'Aboreto', cursive;
     background: linear-gradient(#1c9edfff, rgb(1, 66, 99));
     color: var(--golden-yellow);
@@ -62,12 +62,15 @@ a:visited {
 
 /******* HEADER STYLING ******/
 
-h1 {
+.title-btn {
+    font-family: 'Aboreto', cursive;
     font-size: var(--fs-m);
+    font-weight: 900;
+    background-color: var(--smokey-black);
     color: var(--golden-yellow);
+    text-align: center;
     margin-bottom: .5rem;
-    display: flex;
-    justify-content: space-around;
+    border: none;
 }
 
 
@@ -86,7 +89,7 @@ li {
 .info-container {
     max-width: 600px;
     background-color: var(--smokey-black);
-    text-align: center;
+    text-align: left;
     padding: 1rem;
     margin: .5rem auto;
     border-radius: var(--br-soft);
@@ -102,10 +105,11 @@ li {
 
 /* ACCORDIAN INFO */
 
-h1:after {
+.title-btn:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */    
     color: var(--golden-yellow);
     font-size: var(--fs-s);
+    /* margin-left: 50px; */
  }
     
 .active:after { /*! FOR JAVASCRIPT */ 
@@ -132,9 +136,11 @@ h3 {
 }
 
 .score {
+    width: 150px;
     font-size: var(--fs-title);
     color: white;
     background-color: var(--smokey-black);
+    text-align: center;
     padding: 2rem 3rem;
     margin-bottom: .5rem;
     border-radius: var(--br-soft);
