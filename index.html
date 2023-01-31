@@ -22,50 +22,53 @@
 
     <body>
 
-    <main>         
+    <main>     
+        
+        <header>
 
         <div class="info-container">
 
             <h1 class="title">Settlers of Catan scorekeeper</h1>
-            <!-- <h2 class="subtitle">scorekeeper</h2>    -->
-    
-             <ul>
-                <!-- <li class="list-title">Settlers of Catan</li> -->
-                <!-- <li class="list-subtitle">scorekeeper</li> -->
-                <li>Settlement: +1</li>
-                <li>City : +2</li>
-                <li>Development card: +1</li>
-                <li>Longest road: +2</li>
-                <li>Another player builds the longest road: -2</li>
-                <li>Largest army: 2 points</li>
-                <li>Another player builds the largest army: -2</li>
-            </ul>
-    
+              <div class="panel">  
+                <ul class="panel-text">
+                    <!-- <li class="list-title">Settlers of Catan</li> -->
+                    <!-- <li class="list-subtitle">scorekeeper</li> -->
+                    <li>Settlement: +1</li>
+                    <li>City : +2</li>
+                    <li>Development card: +1</li>
+                    <li>Longest road: +2</li>
+                    <li>Another player builds the longest road: -2</li>
+                    <li>Largest army: 2 points</li>
+                    <li>Another player builds the largest army: -2</li>
+                </ul>
+            </div> <!--close panel div-->
+
             </div> <!---close info container--> 
 
+        </header>    
 
-        <div class="container-one">
+        <section class="container-one">
          
             <div class="player-container">
                 <h3>Player 1</h3>
-                <p class="one-score">0</p>
+                <p class="score">0</p>
             
             <div class="button-wrapper">
                 <button class="plus-one">+1</button>
                 <button class="plus-two">+2</button>
-                <button class="plus-three">-2</button>
+                <button class="minus-two">-2</button>
             </div> <!--close button wrapper-->          
                 
             </div> <!--close player div-->
           
             <div class="player-container">
                 <h3>Player 2</h3>
-                <p class="two-score">0</p>
+                <p class="score">0</p>
                 
                 <div class="button-wrapper">
                     <button class="plus-one">+1</button>
                     <button class="plus-two">+2</button>
-                    <button class="plus-three">-2</button>
+                    <button class="minus-two">-2</button>
                 </div> <!--close button wrapper-->  
                 
                 
@@ -73,28 +76,28 @@
 
             <div class="player-container">
                 <h3>Player 3</h3>
-                <p class="three-score">0</p>
+                <p class="score">0</p>
                 
                 <div class="button-wrapper">
                     <button class="plus-one">+1</button>
                     <button class="plus-two">+2</button>
-                    <button class="plus-three">-2</button>
+                    <button class="minus-two">-2</button>
                 </div> <!--close button wrapper-->  
             
             </div> <!--close player div-->    
                 
-        </div> <!--close container 1-->   
+        </section>    
         
-        <div class="container-two">
+        <section class="container-two">
             
             <div class="player-container">
                 <h3>Player 4</h3>
-                <p class="four-score">0</p>
+                <p class="score">0</p>
                 
                 <div class="button-wrapper">
                     <button class="plus-one">+1</button>
                     <button class="plus-two">+2</button>
-                    <button class="plus-three">-2</button>
+                    <button class="minus-two">-2</button>
                 </div> <!--close button wrapper-->  
                 
                 
@@ -102,12 +105,12 @@
 
             <div class="player-container">
                 <h3>Player 5</h3>
-                <p class="five-score">0</p>
+                <p class="score">0</p>
                 
                 <div class="button-wrapper">
                     <button class="plus-one">+1</button>
                     <button class="plus-two">+2</button>
-                    <button class="plus-three">-2</button>
+                    <button class="minus-two">-2</button>
                 </div> <!--close button wrapper-->  
                 
                 
@@ -116,21 +119,27 @@
             <div class="player-container">
 
                 <h3>Player 6</h3>
-                <p class="six-score">0</p>
+                <p class="score">0</p>
                 
                 <div class="button-wrapper">
                     <button class="plus-one">+1</button>
                     <button class="plus-two">+2</button>
-                    <button class="plus-three">-2</button>
+                    <button class="minus-two">-2</button>
                 </div> <!--close button wrapper-->  
                 
                 
             </div> <!--close player div-->
 
 
-        </div> <!-- close container 2-->
+        </section> 
 
-        
+    <footer>
+
+        <button class="reset" id="reset-btn">reset</button>
+
+    </footer>  
+
+
      </main>   
 
      <script src="index.js"></script>
