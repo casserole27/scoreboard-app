@@ -76,7 +76,6 @@ a:visited {
     gap: 7rem;
 }
 
-
 ul {
     font-size: var(--fs-xs);
     color: var(--carolina-blue);
@@ -122,6 +121,7 @@ li {
     content: '\02795'; /* Unicode character for "plus" sign (+) */    
     color: var(--golden-yellow);
     font-size: var(--fs-s);
+    
     
  }
 
@@ -210,6 +210,11 @@ h3 {
     box-shadow: 3px 3px var(--rust);
 }
 
+.plus-one:hover, .plus-two:hover, .minus-two:hover {
+    background-color: var(--carolina-blue);
+    transform: translateY(-5px);
+}
+
 .reset {
     width: 150px;
     display: block;
@@ -226,6 +231,12 @@ h3 {
     box-shadow: 5px 5px var(--smokey-black);
 
 }
+
+.reset:hover {
+    background-color: var(--carolina-blue);
+    transform: translateY(-5px);
+}
+
 
 
 /****** TOGGLE CLASS FOR WINNING SCORE ******/

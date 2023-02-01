@@ -31,85 +31,67 @@ for (i = 0; i < acc.length; i++) {
 
 
 //! INCREMENT AND DECREMENT FUNCTIONS
+//? How to have less variables and function?
+//? for loop or .forEach()
+//? parameters
 
 function playerOneInc() {
     playerOneCount += 1;
     playerOne.textContent = playerOneCount;
-    currentWinner();
-
 }
 
 function playerOneIncTwo() {
     playerOneCount += 2;
     playerOne.textContent = playerOneCount;
-    currentWinner();
 
 }
 
 function playerOneDec() {
     playerOneCount -= 2;
     playerOne.textContent = playerOneCount;
-    currentWinner();
 
 }
 
 function playerTwoInc() {
     playerTwoCount += 1;
     playerTwo.textContent = playerTwoCount;
-    currentWinner();
 
 }
 
 function playerTwoIncTwo() {
     playerTwoCount += 2;
     playerTwo.textContent = playerTwoCount;
-    currentWinner();
 
 }
 
 function playerTwoDec() {
     playerTwoCount -= 2;
     playerTwo.textContent = playerTwoCount;
-    currentWinner();
 
 }
 
 function playerThreeInc() {
     playerThreeCount += 1;
     playerThree.textContent = playerThreeCount;
-    currentWinner();
 
 }
 
 function playerThreeIncTwo() {
     playerThreeCount += 2;
     playerThree.textContent = playerThreeCount;
-    currentWinner();
 
 }
 
 function playerThreeDec() {
     playerThreeCount -= 2;
     playerThree.textContent = playerThreeCount;
-    currentWinner();
 
 }
 
 
-//!ADD BORDER TO WINNING SCORE
+//?ADD BORDER TO WINNING SCORE
 
-// function currentWinner() {
-//     if(playerOneCount > playerTwoCount && playerOneCount > playerThreeCount) {
-//         let element = document.getElementById("player-one");
-//         element.classList.toggle("winner");
-//     } else if (playerTwoCount > playerOneCount && playerTwoCount > playerThreeCount) {
-//         let element = document.getElementById("player-two");
-//         element.classList.toggle("winner");
-//     } else if (playerThreeCount > playerOneCount && playerThreeCount > playerTwoCount) {
-//         let element = document.getElementById("player-three");
-//         element.classList.toggle("winner");
-//     }
-// }
+
 
 //! RESET FUNCTION
 function reset() {
