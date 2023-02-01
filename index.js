@@ -1,71 +1,125 @@
 
+let playerOneCount = 0;
+let playerTwoCount = 0;
+let playerThreeCount = 0;
 
-function showRules(){
+const playerOne = document.getElementById("player-one");
+const playerTwo = document.getElementById("player-two");
+const playerThree = document.getElementById("player-three");
+// const playerFour = document.getElementById("player-four");
+// const playerFive = document.getElementById("player-five");
+// const playerSix = document.getElementById("player-six");
 
-    let panel = document.getElementById('panel');
-    // console.log(panel);
+let acc = document.getElementsByClassName("accordion");
 
-    if (panel.style.display === "none") {
-        panel.style.display = "block";
-    } else {
-        panel.style.display = "none";
-    }
+
+//! ACCORDION MENU FUNCTION THAT SHOWS SCORING RULES
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function(){
+        this.classList.toggle("active");
     
-}
-
-
-
-/*
-let saveEl = document.getElementById("save-el")
-let countEl = document.getElementById("count-el")
-let count = 0
-
-function increment() {
-    count += 1
-    countEl.textContent = count
-}
-
-function save() {
-    let countStr = count + " - "
-    saveEl.textContent += countStr
-    count = 0;
-    countEl.textContent = 0;
-    
-}
-*/
-
-
-
-/*
-
-//TODO
-//TODO W3 Schools accordion menu tutorial: https://www.w3schools.com/howto/howto_js_accordion.asp
-
-
-//TODO define accordian variable 
-
-let acc = document.getElementsByClassName('accordion');
-
-//TODO loop through accordion items
-
-for (let i = 0; i < acc.length; i++) {
-    console.log(acc[i]);
-    acc[i].addEventListener("click", function() {
-        //TODO Toggle between adding and removing the "active" class
-       
-    this.classList.toggle("active");
-    
-        //TODO Toggle between hiding and showing the active panel 
     let panel = this.nextElementSibling;
     
-        console.log(panel);
-
     if (panel.style.display === "block") {
-          panel.style.display = "none";
-    } else {
-          panel.style.display = "block";
-    }
-      });
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";   
     } 
+    });
+}
 
-  */  
+
+//! INCREMENT AND DECREMENT FUNCTIONS
+
+function playerOneInc() {
+    playerOneCount += 1;
+    playerOne.textContent = playerOneCount;
+    currentWinner();
+
+}
+
+function playerOneIncTwo() {
+    playerOneCount += 2;
+    playerOne.textContent = playerOneCount;
+    currentWinner();
+
+}
+
+function playerOneDec() {
+    playerOneCount -= 2;
+    playerOne.textContent = playerOneCount;
+    currentWinner();
+
+}
+
+function playerTwoInc() {
+    playerTwoCount += 1;
+    playerTwo.textContent = playerTwoCount;
+    currentWinner();
+
+}
+
+function playerTwoIncTwo() {
+    playerTwoCount += 2;
+    playerTwo.textContent = playerTwoCount;
+    currentWinner();
+
+}
+
+function playerTwoDec() {
+    playerTwoCount -= 2;
+    playerTwo.textContent = playerTwoCount;
+    currentWinner();
+
+}
+
+function playerThreeInc() {
+    playerThreeCount += 1;
+    playerThree.textContent = playerThreeCount;
+    currentWinner();
+
+}
+
+function playerThreeIncTwo() {
+    playerThreeCount += 2;
+    playerThree.textContent = playerThreeCount;
+    currentWinner();
+
+}
+
+function playerThreeDec() {
+    playerThreeCount -= 2;
+    playerThree.textContent = playerThreeCount;
+    currentWinner();
+
+}
+
+
+//!ADD BORDER TO WINNING SCORE
+
+// function currentWinner() {
+//     if(playerOneCount > playerTwoCount && playerOneCount > playerThreeCount) {
+//         let element = document.getElementById("player-one");
+//         element.classList.toggle("winner");
+//     } else if (playerTwoCount > playerOneCount && playerTwoCount > playerThreeCount) {
+//         let element = document.getElementById("player-two");
+//         element.classList.toggle("winner");
+//     } else if (playerThreeCount > playerOneCount && playerThreeCount > playerTwoCount) {
+//         let element = document.getElementById("player-three");
+//         element.classList.toggle("winner");
+//     }
+// }
+
+//! RESET FUNCTION
+function reset() {
+    playerOneCount = 0;
+    playerTwoCount = 0;
+    playerThreeCount = 0;
+    playerOne.textContent = playerOneCount;
+    playerTwo.textContent = playerTwoCount;
+    playerThree.textContent = playerThreeCount;
+}
+
+
+

@@ -47,6 +47,7 @@ https://coolors.co/a04c24-ce2d25-1c9edf-79ad50-ffdf01
 
 
 body {
+    min-height: 100vh;
     font-family: 'Aboreto', cursive;
     background: linear-gradient(#1c9edfff, rgb(1, 66, 99));
     color: var(--golden-yellow);
@@ -62,7 +63,7 @@ a:visited {
 
 /******* HEADER STYLING ******/
 
-.title-btn {
+.accordion {
     font-family: 'Aboreto', cursive;
     font-size: var(--fs-m);
     font-weight: 900;
@@ -71,6 +72,8 @@ a:visited {
     text-align: center;
     margin-bottom: .5rem;
     border: none;
+    display: flex;
+    gap: 7rem;
 }
 
 
@@ -95,6 +98,16 @@ li {
     border-radius: var(--br-soft);
 }
 
+@media (max-width: 400px) {
+    .accordion {
+        gap: 2rem;
+    }
+    
+    .info-container {
+        width: 250px;
+    }
+}
+
 
 /****** ACCORDIAN STYLING ******/
 
@@ -105,13 +118,13 @@ li {
 
 /* ACCORDIAN INFO */
 
-.title-btn:after {
+.accordion:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */    
     color: var(--golden-yellow);
     font-size: var(--fs-s);
-    /* margin-left: 50px; */
- }
     
+ }
+
 .active:after { /*! FOR JAVASCRIPT */ 
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
@@ -144,9 +157,9 @@ h3 {
     padding: 2rem 3rem;
     margin-bottom: .5rem;
     border-radius: var(--br-soft);
+    border: 5px solid var(--smokey-black);
 }
 
- 
 .container-one {
     display: flex;
     flex-direction: row;
@@ -215,4 +228,7 @@ h3 {
 }
 
 
-
+/****** TOGGLE CLASS FOR WINNING SCORE ******/
+.winner {
+    border: 5px solid var(--carolina-blue);
+}
