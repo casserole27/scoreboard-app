@@ -58,6 +58,7 @@ for (i = 0; i < acc.length; i++) {
 //TODO Implementation of JS from Guil's code review video
 /****** Can it be even DRYer since I have six datasets?*******/
 
+
 container.addEventListener("click", function(e) {
     const target = e.target;
     const playerOnePts = target.dataset.onePts;
