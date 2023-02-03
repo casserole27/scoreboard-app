@@ -1,7 +1,7 @@
 /*
 Author: Cassie Lewis
 https://clewisdev.com
-Date: 
+Date: Jan - Feb 2023 
 */
 
 /*
@@ -57,9 +57,6 @@ body {
     justify-content: center;
 }
 
-a:visited {
-    color: var(--golden-yellow);
-}
 
 /******* HEADER STYLING ******/
 
@@ -72,6 +69,7 @@ a:visited {
     text-align: center;
     margin-bottom: .5rem;
     border: none;
+    /****** Is this the best practice for placing the plus/minus? ******/
     display: flex;
     gap: 7rem;
 }
@@ -115,15 +113,14 @@ li {
 }
 
 
-/* ACCORDIAN INFO */
+/****** ACCORDIAN PLUS/MINUS ******/
 
 .accordion:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */    
+/****** plus/minus signs, why won't they change color? ******/
     color: var(--golden-yellow);
     font-size: var(--fs-s);
-    
-    
- }
+}
 
 .active:after { /*! FOR JAVASCRIPT */ 
     content: "\2796"; /* Unicode character for "minus" sign (-) */
@@ -238,8 +235,8 @@ h3 {
 }
 
 
-
 /****** TOGGLE CLASS FOR WINNING SCORE ******/
 .winner {
     border: 5px solid var(--carolina-blue);
 }
+

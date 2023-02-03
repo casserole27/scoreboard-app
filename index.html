@@ -22,7 +22,7 @@
 
     <body>
 
-    <main>     
+    <main class="container">     
         
         <header>
 
@@ -31,8 +31,6 @@
             <button class="accordion" id="accordion">Settlers of Catan scorekeeper</button>
               <div class="panel" id="panel">  
                 <ul class="panel-text">
-                    <!-- <li class="list-title">Settlers of Catan</li> -->
-                    <!-- <li class="list-subtitle">scorekeeper</li> -->
                     <li>Settlement: +1</li>
                     <li>City : +2</li>
                     <li>Development card: +1</li>
@@ -53,10 +51,10 @@
                 <h3>Player 1</h3>
                 <p class="score" id="player-one">0</p>
             
-                <div class="button-wrapper">
-                    <button class="plus-one" id="p1-plusone" onclick="playerOneInc()">+1</button>
-                    <button class="plus-two" id="p1-plustwo" onclick="playerOneIncTwo()">+2</button>
-                    <button class="minus-two" id="p1-minustwo" onclick="playerOneDec()">-2</button>
+                <div class="button-container">
+                    <button class="plus-one"  data-one-pts="1"   >+1</button>
+                    <button class="plus-two"  data-one-pts="2"   >+2</button>
+                    <button class="minus-two" data-one-pts="-2" >-2</button>
                 </div> <!--close button wrapper-->          
                 
             </div> <!--close player div-->
@@ -65,10 +63,10 @@
                 <h3>Player 2</h3>
                 <p class="score" id="player-two">0</p>
                 
-                <div class="button-wrapper">
-                    <button class="plus-one" id="p1-plusone" onclick="playerTwoInc()">+1</button>
-                    <button class="plus-two" id="p1-plustwo" onclick="playerTwoIncTwo()">+2</button>
-                    <button class="minus-two" id="p1-minustwo" onclick="playerTwoDec()">-2</button>
+                <div class="button-container">
+                    <button class="plus-one" data-two-pts="1" >+1</button>
+                    <button class="plus-two" data-two-pts="2" >+2</button>
+                    <button class="minus-two" data-two-pts="-2">-2</button>
                 </div> <!--close button wrapper-->  
                 
                 
@@ -78,10 +76,10 @@
                 <h3>Player 3</h3>
                 <p class="score" id="player-three">0</p>
                 
-                <div class="button-wrapper">
-                    <button class="plus-one" id="p1-plusone" onclick="playerThreeInc()">+1</button>
-                    <button class="plus-two" id="p1-plustwo" onclick="playerThreeIncTwo()">+2</button>
-                    <button class="minus-two" id="p1-minustwo" onclick="playerThreeDec()">-2</button>
+                <div class="button-container">
+                    <button class="plus-one" data-three-pts="1" >+1</button>
+                    <button class="plus-two" data-three-pts="2" >+2</button>
+                    <button class="minus-two" data-three-pts="-2">-2</button>
                 </div> <!--close button wrapper-->  
             
             </div> <!--close player div-->    
@@ -94,10 +92,10 @@
                 <h3>Player 4</h3>
                 <p class="score" id="player-four">0</p>
                 
-                <div class="button-wrapper">
-                    <button class="plus-one" id="btn-plusone">+1</button>
-                    <button class="plus-two" id="btn-plustwo">+2</button>
-                    <button class="minus-two" id="btn-minustwo">-2</button>
+                <div class="button-container">
+                    <button class="plus-one" data-four-pts="1" >+1</button>
+                    <button class="plus-two" data-four-pts="2" >+2</button>
+                    <button class="minus-two" data-four-pts="-2">-2</button>
                 </div> <!-- close button wrapper-->
                 
                 
@@ -107,10 +105,10 @@
                 <h3>Player 5</h3>
                 <p class="score" id="player-five">0</p>
                 
-                <div class="button-wrapper">
-                    <button class="plus-one" id="btn-plusone">+1</button>
-                    <button class="plus-two" id="btn-plustwo">+2</button>
-                    <button class="minus-two" id="btn-minustwo">-2</button>
+                <div class="button-container">
+                    <button class="plus-one" data-five-pts="1" >+1</button>
+                    <button class="plus-two" data-five-pts="2" >+2</button>
+                    <button class="minus-two" data-five-pts="-2">-2</button>
                 </div> <!--close button wrapper-->  
                 
                 
@@ -121,10 +119,10 @@
                 <h3>Player 6</h3>
                 <p class="score" id="player-six">0</p>
                 
-                <div class="button-wrapper">
-                    <button class="plus-one" id="btn-plusone">+1</button>
-                    <button class="plus-two" id="btn-plustwo">+2</button>
-                    <button class="minus-two" id="btn-minustwo">-2</button>
+                <div class="button-container">
+                    <button class="plus-one" data-six-pts="1" >+1</button>
+                    <button class="plus-two" data-six-pts="2" >+2</button>
+                    <button class="minus-two" data-six-pts="-2">-2</button>
                 </div> <!--close button wrapper-->  
                 
                 
@@ -135,7 +133,7 @@
 
     <footer>
 
-        <button class="reset" id="reset-btn" onclick="reset()">reset</button>
+        <button class="reset" id="reset-btn">reset</button>
 
     </footer>  
 
