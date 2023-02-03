@@ -17,6 +17,7 @@
 ### Overview
 
 Scrimba Module 3 Solo Projoect - Scoreboard App
+Settlers of Catan Scorekeeper
 [Scrimba](https://scrimba.com)
 
 
@@ -50,6 +51,8 @@ Largest army: 2 points, 3 knight cards - can be taken
 
 
  ### Screenshot
+ ![Scorekeeper screenshot - desktop](/scoreboard-desktop.png)
+ ![Scorekeeper screenshot - mobile](/scoreboard-mobile.png)
 
 ### Links
 
@@ -105,11 +108,66 @@ Check markup and accessibility
 
 ### What I learned
 
+I am not a sportsing person, so I decided to turn my project into a scorekeeper for one of my favorite board games, Settlers of Catan. Little did I know that this would open up a JavaScript can of worms since I now had to listen for 18 events: three buttons each for six players.
+
+I learned about [event delegation / event bubbling](https://www.youtube.com/watch?v=oot4h8oM_hI&t=271s)
+This involves selecting a parent/ancestor container, and then listening for all events inside that container. I was able to declare a variable for my main HTML element, and then listen for the button clicks within that container. 
+- declare variable for main HTML element
+- add a click event listener to that element, and a function with a parameter of "e" which is the event object
+- add custom HTML data attributes
+- use JS .target and .dataset properties with variables to pass the button values into if statements 
+
+```html
+    <main class="container" id="container">     
+        
+        <header>
+
+        <div class="info-container">
+
+            <button class="accordion" id="accordion">Settlers of Catan scorekeeper</button>
+              <div class="panel" id="panel">  
+                <ul class="panel-text">
+                    <li>Settlement: +1</li>
+                    <li>City : +2</li>
+                    <li>Development card: +1</li>
+                    <li>Longest road: +2</li>
+                    <li>Another player builds the longest road: -2</li>
+                    <li>Largest army: 2 points</li>
+                    <li>Another player builds the largest army: -2</li>
+                </ul>
+            </div> <!--close panel div-->
+
+            </div> <!---close info container--> 
+```
+
+```javascript
+
+const container = document.getElementById("container");
+
+container.addEventListener("click", function(e) {
+    const target = e.target;
+    const playerOnePts = target.dataset.onePts;
+    const playerTwoPts = target.dataset.twoPts;
+    const playerThreePts = target.dataset.threePts;
+    const playerFourPts = target.dataset.fourPts;
+    const playerFivePts = target.dataset.fivePts;
+    const playerSixPts = target.dataset.sixPts;
+
+    if (playerOnePts) {
+        playerOneCount += +playerOnePts;
+        playerOne.textContent = playerOneCount;
+    }
+```    
+
 ### Continued development
 
 Ideas from Paul:
 Datasets by player, function with parameters in order to minimize if statements
 Storing variables / data as arrays and/or objects
+Continue adding to the project as I progress through the modules.
+ - more JavaScript and eventually React will give me the functionality I desire
+
+Make the winning score function logic DRYer
 
 ### Useful resources
 
