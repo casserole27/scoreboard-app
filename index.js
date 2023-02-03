@@ -7,10 +7,8 @@ let playerFourCount = 0;
 let playerFiveCount = 0;
 let playerSixCount = 0;
 
-//! HTML <MAIN> ELEMENT
-//? .querySelector vs. getElement methods
+//! HTML <MAIN> ELEMENT FOR EVENT DELEGATION / BUBBLING
 const container = document.getElementById("container");
-
 
 //! SCORE FIELD VARIABLES, HTML <P> ELEMENTS
 const playerOne = document.getElementById("player-one");
@@ -27,10 +25,7 @@ const acc = document.getElementsByClassName("accordion");
 const reset = document.getElementById("reset-btn");
 
 
-
-//! ACCORDION MENU FUNCTION THAT SHOWS SCORING RULES
-// W3 Schools tutorial: https://www.w3schools.com/howto/howto_js_collapsible.asp
-/****** Why can't I change the color of the +/- signs? *******/
+//! COLLAPSIBLE MENU FUNCTION THAT SHOWS SCORING RULES
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function(){
@@ -47,17 +42,10 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-//! INCREMENT AND DECREMENT FUNCTIONS
-//? How to have less variables and function?
-//? IDEAS
-//? for loop or .forEach()
-//? classList
-//? parameters
+//! INCREMENT AND DECREMENT FUNCTIONS USING EVENT DELEGATION / BUBBLING
 
-//TODO Guil sent a YouTube video: https://www.youtube.com/watch?v=oot4h8oM_hI&t=271s
-//TODO Implementation of JS from Guil's code review video
-/****** Can it be even DRYer since I have six datasets?*******/
-
+//TODO IDEAS FOR DRYER CODE 
+//? Data points by player, function with parameters (playerNumber, points), condensing if statements
 
 container.addEventListener("click", function(e) {
     const target = e.target;
@@ -67,8 +55,7 @@ container.addEventListener("click", function(e) {
     const playerFourPts = target.dataset.fourPts;
     const playerFivePts = target.dataset.fivePts;
     const playerSixPts = target.dataset.sixPts;
-    
-    
+
     if (playerOnePts) {
         playerOneCount += +playerOnePts;
         playerOne.textContent = playerOneCount;
@@ -102,29 +89,60 @@ container.addEventListener("click", function(e) {
 })
 
 
+//! ADD BLUE BORDER TO WINNING SCORE
 
-//! ADD BORDER TO WINNING SCORE
-/****** Is there something DRY I can do for this logic that highlights the highest score? ******/
+//TODO IDEAS FOR DRY CODE
+//? loop through an array of player counts and toggling the class based on the highest one
+
 function winningScore() {
-    playerOne.classList.toggle("winner", playerOneCount > playerTwoCount);
-    playerTwo.classList.toggle("winner", playerTwoCount > playerOneCount);
-}
+    playerOne.classList.toggle("winner", 
+        playerOneCount > playerTwoCount 
+        && playerOneCount > playerThreeCount
+        && playerOneCount > playerFourCount
+        && playerOneCount > playerFiveCount
+        && playerOneCount > playerSixCount);
+    playerTwo.classList.toggle("winner", 
+        playerTwoCount > playerOneCount
+        && playerTwoCount > playerThreeCount
+        && playerTwoCount > playerFourCount
+        && playerTwoCount > playerFiveCount
+        && playerTwoCount > playerSixCount);
+    playerThree.classList.toggle("winner", 
+        playerThreeCount > playerOneCount
+        && playerThreeCount > playerTwoCount
+        && playerThreeCount > playerFourCount
+        && playerThreeCount > playerFiveCount
+        && playerThreeCount > playerSixCount);
+    playerFour.classList.toggle("winner", 
+        playerFourCount > playerOneCount
+        && playerFourCount > playerTwoCount
+        && playerFourCount > playerThreeCount
+        && playerFourCount > playerFiveCount
+        && playerFourCount > playerSixCount);    
+    playerFive.classList.toggle("winner", 
+        playerFiveCount > playerOneCount
+        && playerFiveCount > playerTwoCount
+        && playerFiveCount > playerThreeCount
+        && playerFiveCount > playerFourCount
+        && playerFiveCount > playerSixCount);
+    playerSix.classList.toggle("winner", 
+        playerSixCount > playerOneCount
+        && playerSixCount > playerTwoCount
+        && playerSixCount > playerThreeCount
+        && playerSixCount > playerFourCount
+        && playerSixCount > playerFiveCount);      
+    }
 
 
-//! RESET FUNCTION
+
+//! RESET FUNCTION SETTING COUNTS TO ZERO
 reset.addEventListener("click", function(reset) {
-    playerOneCount = 0;
-    playerTwoCount = 0;
-    playerThreeCount = 0;
-    playerFourCount = 0;
-    playerFiveCount = 0;
-    playerSixCount = 0;
-    playerOne.textContent = 0;
-    playerTwo.textContent = 0;
-    playerThree.textContent = 0;
-    playerFour.textContent = 0;
-    playerFive.textContent = 0;
-    playerSix.textContent = 0; 
+    playerOne.textContent = playerOneCount= 0;
+    playerTwo.textContent = playerTwoCount = 0;
+    playerThree.textContent = playerThreeCount = 0;
+    playerFour.textContent = playerFourCount = 0;
+    playerFive.textContent = playerFiveCount = 0;
+    playerSix.textContent = playerSixCount = 0; 
 })
 
 

@@ -71,7 +71,7 @@ body {
     border: none;
     /****** Is this the best practice for placing the plus/minus? ******/
     display: flex;
-    gap: 7rem;
+    gap: 6rem;
 }
 
 ul {
@@ -97,7 +97,7 @@ li {
 
 @media (max-width: 400px) {
     .accordion {
-        gap: 2rem;
+        gap: 1rem;
     }
     
     .info-container {
@@ -116,17 +116,15 @@ li {
 /****** ACCORDIAN PLUS/MINUS ******/
 
 .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */    
-/****** plus/minus signs, why won't they change color? ******/
+    font-family: "Font Awesome 5 Free";
+    content: "\f0fe";
     color: var(--golden-yellow);
-    font-size: var(--fs-s);
+    font-size: var(--fs-l);
 }
 
 .active:after { /*! FOR JAVASCRIPT */ 
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\f146"; 
 }
-
-
 
 /****** MAIN CONTAINER STYLING ******/
 
