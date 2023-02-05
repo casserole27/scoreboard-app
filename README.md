@@ -29,10 +29,9 @@ Requirements:
 - make all six buttons work
 
 Stretch goals:
-- add a "reset" button that sets scores to zero
+- add a "new game" button that sets scores to zero
 - highlight the leader
-- add a few more counters: period, fouls, timer 
-- change the design
+- change the design: make it your own
 
 Personal stretch goals:
 - add a collapsible menu for scoring rules
@@ -40,13 +39,13 @@ Personal stretch goals:
 - responsive and compact design
 - DRY JavaScript code
 
-Catan Scoring:
-6 players
-Settlement: 1 point
-City : 2 points
-Development card: 1 point
-Longest road: 2 points, five or greater - can be taken
-Largest army: 2 points, 3 knight cards - can be taken
+- Catan Scoring:
+- 6 players
+- Settlement: 1 point
+- City : 2 points
+- Development card: 1 point
+- Longest road: 2 points, five or greater - can be taken
+- Largest army: 2 points, 3 knight cards - can be taken
 
 
 

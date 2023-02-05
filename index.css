@@ -208,7 +208,7 @@ h3 {
 }
 
 .reset {
-    width: 150px;
+    width: 200px;
     display: block;
     font-family: 'Aboreto', cursive;
     font-size: var(--fs-m);
@@ -216,7 +216,7 @@ h3 {
     background-color: var(--maximum-red);
     text-align: center;
     letter-spacing: .25rem;
-    padding: 1rem 2rem;
+    padding: 1rem;
     margin: 2rem auto;
     border-radius: var(--br-button);
     border: none;
