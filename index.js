@@ -45,6 +45,9 @@ for (i = 0; i < acc.length; i++) {
 //TODO IDEAS FOR DRYER CODE 
 //? Data points by player, function with parameters (playerNumber, points), condensing if statements
 
+//Event Delegation Video
+//(https://www.youtube.com/watch?v=oot4h8oM_hI&t=271s)
+
 container.addEventListener("click", function(e) {
     const target = e.target;
     const playerOnePts = target.dataset.onePts;
